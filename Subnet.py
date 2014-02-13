@@ -19,15 +19,17 @@ class Direct_Topo(Topo):
 		# Add the switches
 		S1 = self.addSwitch('s1')
 
-		# Add the connections between the switch, router, and ids
-		self.addLink(R1, IDS)
-		self.addLink(S1, IDS)
+		# Add the connections between the ids and the switch
+		self.addLink(IDS, S1)
 
 		# Connect the hosts to the network
 		self.addLink(H1, S1)
 		self.addLink(H2, S1)
 		self.addLink(H3, S1)
 		self.addLink(H4, S1)
+
+		# Connect the router to the ids
+		self.addLink(R1, IDS)
 
 class Indirect_Topo(Topo):
 	def __init__(self):
@@ -48,7 +50,7 @@ class Indirect_Topo(Topo):
 		# Add the switches
 		S1 = self.addSwitch('s1')
 
-		# Add the connections between the switch, router, and ids
+		# Connect the router and ids to the switch
 		self.addLink(R1, S1)
 		self.addLink(IDS, S1)
 
