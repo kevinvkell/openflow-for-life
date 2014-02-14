@@ -4,7 +4,7 @@ h3 ifconfig h3-eth0 192.168.12.3 netmask 255.255.255.0
 h4 ifconfig h4-eth0 192.168.12.4 netmask 255.255.255.0
 r1 ifconfig r1-eth0 192.168.23.6 netmask 255.255.255.0
 ids ifconfig ids-eth0 192.168.12.5 netmask 255.255.255.0
-ids ifconfig ids-eth1 192.168.23.6 netmask 255.255.255.0
+ids ifconfig ids-eth1 192.168.23.5 netmask 255.255.255.0
 h1 route add default gw 192.168.12.5
 h2 route add default gw 192.168.12.5
 h3 route add default gw 192.168.12.5
