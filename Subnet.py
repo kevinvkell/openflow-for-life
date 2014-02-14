@@ -1,5 +1,11 @@
 from mininet.topo import Topo
 
+# This file defines the "direct" and "indirect" topolgy
+# In order to include these in mn, add the following to the
+# mn command
+
+# --custom /path/to/Subnet.py --topo [direct|indirect]
+
 class Direct_Topo(Topo):
 	def __init__(self):
 		Topo.__init__(self)
