@@ -1,9 +1,10 @@
 #!/bin/bash
 # This script will setup the proper ip addresses for the direct
-# subnet. It is not required for the indirect subnet
+# subnet.
 # To include this script, type the following when initializing
 # mininet with mn
 # --pre /path/to/setup_direct.sh
+# Alternately, use init_mininet_direct.sh to setup mininet
 h1 ifconfig h1-eth0 192.168.12.1 netmask 255.255.255.0
 h2 ifconfig h2-eth0 192.168.12.2 netmask 255.255.255.0
 h3 ifconfig h3-eth0 192.168.12.3 netmask 255.255.255.0
